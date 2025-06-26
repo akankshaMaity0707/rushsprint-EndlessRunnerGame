@@ -26,6 +26,7 @@ public class HealthSystem : MonoBehaviour
         {
             currentHealth = 0f;
             OnDeath?.Invoke();
+            GameManager.instance.enemyspawner.spawnedEnemies.Clear();
         }
     }
 

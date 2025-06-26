@@ -1,0 +1,5 @@
+C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/.utmp/RelWithDebInfo/z6l5c2md/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/.utmp/RelWithDebInfo/z6l5c2md/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/.utmp/RelWithDebInfo/z6l5c2md/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/.utmp/RelWithDebInfo/z6l5c2md/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/.utmp/RelWithDebInfo/z6l5c2md/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

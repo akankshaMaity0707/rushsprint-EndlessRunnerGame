@@ -14,7 +14,7 @@ public class BoostSpeed : MonoBehaviour
             if (player != null)
             {
                 player.ActivateSpeedBoost(boostAmount, boostDuration);
-
+                
                 // Find and disable nearby obstacles
                 Collider[] obstacles = Physics.OverlapSphere(transform.position, 10f); // Adjust radius
                 foreach (Collider col in obstacles)

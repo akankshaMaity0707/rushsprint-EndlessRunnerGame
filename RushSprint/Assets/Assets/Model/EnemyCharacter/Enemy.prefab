@@ -590,7 +590,7 @@ MonoBehaviour:
   fireRate: 2
   destroyDistanceBehindPlayer: 5
   enemeyAnim: {fileID: 7742536794326176689}
-  forwardSpeed: 10
+  forwardSpeed: 20
 --- !u!143 &39035568802086294
 CharacterController:
   m_ObjectHideFlags: 0
@@ -609,13 +609,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 2.5
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 2.34
+  m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.9, z: 0}
+  m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!54 &7086868888484800625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &2263438698629212970
 CapsuleCollider:

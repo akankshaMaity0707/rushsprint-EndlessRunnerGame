@@ -1,0 +1,10 @@
+# ninja log v5
+15	5192	7705909395470644	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	87a52a96dbcf17ff
+19	5213	7705909395690745	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ba15aabe615609fb
+5	5228	7705909395797425	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	184a6a8116de3b14
+30	5228	7705909395797425	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	874f32fa1e6ad667
+27	5275	7705909396318566	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	df59708f7dd2e585
+1	5317	7705909396757819	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	b415098a3e13cea1
+23	5438	7705909397970429	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	a000fa65f742f45f
+9	5558	7705909399188448	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	945a5410072199f3
+5558	5675	7705909400366222	C:/UnityProject's/GitProjects/rushsprint-EndlessRunnerGame/RushSprint/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/z6l5c2md/obj/arm64-v8a/libgame.so	5ca9bda3ddf17f95

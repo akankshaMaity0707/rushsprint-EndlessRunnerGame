@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -7,9 +8,10 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 30f;
     public Transform player;
 
-    private List<GameObject> spawnedEnemies = new List<GameObject>();
+    public List<GameObject> spawnedEnemies = new List<GameObject>();
     private bool isSpawning = true;
 
+    
     private void Start()
     {
         InvokeRepeating(nameof(SpawnEnemy), 5f, spawnInterval);
@@ -20,9 +22,11 @@ public class EnemySpawner : MonoBehaviour
         if (!isSpawning || GameManager.instance == null || GameManager.instance.IsGameOver() || player == null)
             return;
 
-        Vector3 spawnPos = new Vector3(0, player.position.y, player.position.z + 50f);
+        Vector3 spawnPos = new Vector3(0, player.position.y, player.position.z + 150f);
 
-        GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        GameObject enemy = Instantiate(enemyPrefab);
+        enemy.SetActive(true);
+        enemy.transform.position = spawnPos;
         spawnedEnemies.Add(enemy);
     }
 
@@ -38,4 +42,5 @@ public class EnemySpawner : MonoBehaviour
 
         spawnedEnemies.Clear();
     }
+
 }

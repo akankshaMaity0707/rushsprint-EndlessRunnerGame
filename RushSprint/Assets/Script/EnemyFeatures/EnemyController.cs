@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -9,8 +10,8 @@ public class EnemyController : MonoBehaviour
 
     private float nextFireTime;
     private Transform player;
-    public Animator enemeyAnim;
-
+    //public Animator enemeyAnim;
+    private float normalSpeed;
     public float forwardSpeed = 20f;
     private CharacterController controller;
     private Vector3 moveDirection;
@@ -18,8 +19,8 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
-        enemeyAnim =GetComponent<Animator>();
+        //controller = GetComponent<CharacterController>();
+       // enemeyAnim =GetComponent<Animator>();
        // enemyRun();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -27,7 +28,7 @@ public class EnemyController : MonoBehaviour
         Vector3 lookDir = player.position - transform.position;
         lookDir.y = 0; // ignore vertical difference
         if (lookDir != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(lookDir);
+            //transform.rotation = Quaternion.LookRotation(lookDir);
 
         // Destroy on death
         GetComponent<HealthSystem>().OnDeath += Die;
@@ -35,8 +36,8 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        moveDirection.z = forwardSpeed;
-        controller.Move(moveDirection * Time.deltaTime);
+        //moveDirection.z = forwardSpeed;
+        //controller.Move(moveDirection * Time.deltaTime);
         if (Time.time >= nextFireTime)
         {
             FireBullet();
@@ -55,7 +56,7 @@ public class EnemyController : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         Bullet bulletScript = bullet.GetComponent<Bullet>();
 
-        bulletScript.damage = 20f;
+        bulletScript.damage = 5f;
         bulletScript.targetTag = "Player";
         bulletScript.canHitObstacle = false;
         bulletScript.isEnemyBullet = true;
@@ -65,16 +66,25 @@ public class EnemyController : MonoBehaviour
 
         Destroy(bullet, 3f); // Auto destroy after 3 seconds
     }
-
+    public void ActivateEnemySpeedBoost(float boostAmount, float duration)
+    {
+            //normalSpeed = forwardSpeed;
+           // forwardSpeed += boostAmount;
+            StartCoroutine(ResetSpeedAfterDelay(duration));
+    }
+    IEnumerator ResetSpeedAfterDelay(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+      //  forwardSpeed = normalSpeed;
+    }
     void Die()
     {
         Destroy(gameObject);
     }
 
 
-    //void enemyRun()
-    //{
-    //    Vector3 lookDir = -(player.position - transform.position);
-    //    lookDir.y = 0;
-    //}
+   void enemyBoost()
+    {
+        
+    }
 }

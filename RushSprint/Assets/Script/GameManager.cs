@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public Button pauseMainMenuButton;
     public bool showAd = false;
     private bool isPaused = false;
-
+    public EnemySpawner enemyspawner;
 
     #region Monobehaviour Methods
 
@@ -116,9 +116,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // Pause the game
 
         //Stop enemy spawning
-        EnemySpawner spawner = FindObjectOfType<EnemySpawner>();
-        if (spawner != null)
-            spawner.StopAndClearEnemies();
+       
+        if (enemyspawner != null)
+            enemyspawner.StopAndClearEnemies();
 
         // ADs
         if (showAd)

@@ -260,11 +260,9 @@ public class PlayerController : MonoBehaviour
             normalSpeed = forwardSpeed;
             forwardSpeed += boostAmount;
             obstacleDisabled = true;
-
             StartCoroutine(ResetSpeedAfterDelay(duration));
         }
     }
-
     IEnumerator ResetSpeedAfterDelay(float duration)
     {
         yield return new WaitForSeconds(duration);
